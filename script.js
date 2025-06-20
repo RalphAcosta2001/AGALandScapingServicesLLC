@@ -1,5 +1,10 @@
-document.getElementById('magicButton').addEventListener('click', function () {
-    const messageArea = document.getElementById('messageArea');
-    messageArea.textContent = "🎉 You clicked the button! Welcome!";
+document.addEventListener('DOMContentLoaded', function () {
+    const offcanvasEl = document.getElementById('offcanvasMenu');
+    const offcanvas = new bootstrap.Offcanvas(offcanvasEl);
+    
+    offcanvasEl.querySelectorAll('a.nav-link, a.dropdown-item').forEach(link => {
+      link.addEventListener('click', () => {
+        offcanvas.hide();
+      });
+    });
   });
-  

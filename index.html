@@ -11,22 +11,50 @@
 <body>
 
  <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
-  <div class="container-fluid align-items-center d-flex">
-    <a class="navbar-brand d-flex align-items-center" style=" font-size: clamp(1rem, 3vw, 2rem);" width href="#">
-      <img src="Pictures/landscaping logo 3.png" alt="AGA Logo" width="50vw" height="50vw" class="me-2">
+  <div class="container-fluid d-flex align-items-center">
+    <!-- Logo and Brand -->
+    <a class="navbar-brand d-flex align-items-center" style="font-size: clamp(1rem, 3vw, 2rem);" href="#">
+      <img src="Pictures/landscaping logo 3.png" alt="AGA Logo" width="50" height="50" class="me-2">
       AGA Landscaping Services, LLC
     </a>
-    <button class="navbar-toggler d-flex justify-content-end" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+
+    <!-- Offcanvas Toggle Button -->
+    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-      </ul>
+
+    <!-- Offcanvas Menu -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menu</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+          <!-- Optional Dropdown
+          <li class="nav-item dropdown mt-3">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              More
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li> -->
+        </ul>
+      </div>
     </div>
   </div>
 </nav>
+
+
 
 
   <!-- Hero Section with Background Image (No Button) -->
@@ -320,5 +348,6 @@
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
