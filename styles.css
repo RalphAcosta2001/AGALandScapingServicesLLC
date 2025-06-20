@@ -11,11 +11,16 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  padding-top: 56px;;
+  padding-top: 56px;
 }
 
 .navbar-custom {
   background-color: #E2DACF; /* warm orange */
+  height: 56px;
+}
+
+.hero-section {
+  padding-top: 56px;
 }
 
 header {
