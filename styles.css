@@ -16,11 +16,11 @@ body {
 
 .navbar-custom {
   background-color: #E2DACF; /* warm orange */
-  height: 56px;
+  height: 70px;
 }
 
 .hero-section {
-  padding-top: 56px;
+  padding-top: 70px;
 }
 
 header {
@@ -39,7 +39,7 @@ main {
 button {
   padding: 1rem 2rem;
   font-size: 1rem;
-  background-color: #c95502;
+  background-color: #E2DACF;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -47,7 +47,7 @@ button {
 }
 
 button:hover {
-  background-color: #883806;
+  background-color: #E2DACF;
 }
 
 footer {
