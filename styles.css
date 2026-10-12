@@ -4,6 +4,7 @@
   --color-mid: #988686;
   --color-accent: #5C4E4E;
   --color-dark: #000000;
+  --color-bar: #b3b3b3; /* navbar and footer */
 }
 
 body {
@@ -23,7 +24,7 @@ body {
 }
 
 .navbar-custom {
-  background-color: var(--color-mid);
+  background-color: var(--color-bar);
   height: 70px;
 }
 
@@ -107,8 +108,8 @@ button:hover {
 }
 
 footer {
-  background-color: var(--color-accent);
-  color: var(--color-light);
+  background-color: var(--color-bar);
+  color: var(--color-dark);
   text-align: center;
   padding: 1rem;
 }
@@ -472,5 +473,5 @@ footer a {
 }
 
 footer a:hover {
-  color: var(--color-mid);
+  text-decoration: none !important;
 }
