@@ -269,11 +269,16 @@ section {
   border-radius: 999px;
 }
 
-/* Sections below the screen fade in as they scroll into view (see script.js) */
+/* Sections animate in every time they scroll into view, up or down (see script.js) */
 .reveal {
   opacity: 0;
   transform: translateY(90px) scale(0.94);
   transition: opacity 1s ease, transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Scrolling back up: come in from above instead of below */
+.reveal.from-above {
+  transform: translateY(-90px) scale(0.94);
 }
 
 .reveal.is-visible {
@@ -288,6 +293,10 @@ section {
   transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
               box-shadow 0.15s ease;
   transition-delay: calc(0.3s + var(--i, 0) * 0.08s);
+}
+
+.reveal.from-above .service-tile {
+  transform: translateY(-40px);
 }
 
 .reveal.is-visible .service-tile {

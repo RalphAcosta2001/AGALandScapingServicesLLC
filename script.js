@@ -9,29 +9,38 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-// Lazy-load page sections: anything below the screen starts hidden and
-// fades in as it scrolls into view. Runs before the first paint (this
-// script is at the end of <body>), so on-screen content never flickers.
+// Scroll reveal: every section (except the top banner) animates in each
+// time it scrolls into view, whether scrolling down or back up, and resets
+// once it is fully off screen so the effect plays again next time.
+// Runs before the first paint (this script is at the end of <body>), so
+// sections already on screen at load simply start visible, with no flicker.
 (function () {
-  const sections = [...document.querySelectorAll('section:not(.hero-section)')]
-    .filter(el => el.getBoundingClientRect().top > window.innerHeight);
   if (!('IntersectionObserver' in window)) return;
+  const sections = document.querySelectorAll('section:not(.hero-section)');
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      entry.target.classList.add('is-visible');
-      // Hidden carousel slides only download once shown; fetch them now so
-      // the first slide change doesn't show a blank frame
-      entry.target.querySelectorAll('.carousel-item img[loading="lazy"]').forEach(img => {
+      const el = entry.target;
+      if (!entry.isIntersecting) {
+        // Fully off screen: reset, and remember which side it left from so
+        // it enters from that same side (from above when scrolling up)
+        el.classList.remove('is-visible');
+        el.classList.toggle('from-above', entry.boundingClientRect.top < 0);
+        return;
+      }
+      // Hidden carousel slides only download once shown; fetch them as soon
+      // as the carousel starts entering so slide changes never show a blank
+      el.querySelectorAll('.carousel-item img[loading="lazy"]').forEach(img => {
         img.loading = 'eager';
       });
-      observer.unobserve(entry.target);
+      if (entry.intersectionRatio >= 0.1) el.classList.add('is-visible');
     });
-  }, { rootMargin: '0px 0px 200px 0px' });
+  }, { threshold: [0, 0.1] });
 
   sections.forEach(el => {
     el.classList.add('reveal');
+    const box = el.getBoundingClientRect();
+    if (box.top < window.innerHeight && box.bottom > 0) el.classList.add('is-visible');
     observer.observe(el);
   });
 
