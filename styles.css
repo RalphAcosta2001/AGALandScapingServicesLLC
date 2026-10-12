@@ -103,3 +103,43 @@ section {
     padding-inline: 16px;
   }
 }
+
+/* Let the long business name wrap on phones so the language toggle
+   and menu button still fit inside the 70px navbar */
+.navbar-custom .container-fluid {
+  flex-wrap: nowrap;
+}
+
+.navbar-custom .navbar-brand {
+  white-space: normal;
+  min-width: 0;
+  line-height: 1.1;
+}
+
+/* EN | ES language toggle */
+.lang-toggle {
+  display: flex;
+  flex-shrink: 0;
+  border: 1px solid #070d08;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.lang-toggle button {
+  padding: 0.25rem 0.65rem;
+  font-family: inherit;
+  font-size: 0.85rem;
+  background-color: transparent;
+  color: #070d08;
+  border: 0;
+  border-radius: 0;
+}
+
+.lang-toggle button:hover {
+  background-color: rgba(7, 13, 8, 0.1);
+}
+
+.lang-toggle button[aria-pressed="true"] {
+  background-color: #070d08;
+  color: #E2DACF;
+}
