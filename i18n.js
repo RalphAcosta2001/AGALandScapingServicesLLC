@@ -45,6 +45,8 @@ const SPANISH = {
   // Carousels
   "Previous": "Anterior",
   "Next": "Siguiente",
+  "Full screen": "Pantalla completa",
+  "Photo viewer": "Visor de fotos",
   "Gate 1": "Portón 1",
   "Gate 2": "Portón 2",
   "Roof Coating 1": "Recubrimiento de techo 1",
