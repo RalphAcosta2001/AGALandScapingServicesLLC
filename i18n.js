@@ -16,6 +16,13 @@ const SPANISH = {
   "Proudly serving Tucson with beautiful landscaping at affordable prices.":
     "Orgullosamente al servicio de Tucson con hermosos jardines a precios accesibles.",
 
+  // About Us
+  "About Us": "Sobre nosotros",
+  "AGA Landscaping Services has been doing landscaping projects for over 20 years. From gates and retaining walls to turf, pavers, and yard maintenance, we bring that experience to every job, big or small.":
+    "AGA Landscaping Services lleva más de 20 años realizando proyectos de jardinería. Desde portones y muros de contención hasta césped, adoquines y mantenimiento de jardines, aplicamos esa experiencia en cada trabajo, sea grande o pequeño.",
+  "Our team speaks both English and Spanish, so we can help you in whichever language you're most comfortable with.":
+    "Nuestro equipo habla inglés y español, así que podemos atenderle en el idioma en el que se sienta más cómodo.",
+
   // Services
   "🌿 Our Services": "🌿 Nuestros servicios",
   "Gate Replacement": "Reemplazo de portones",
@@ -30,6 +37,10 @@ const SPANISH = {
   "Painting": "Pintura",
   "Carpentry": "Carpintería",
   "Window Shutters": "Persianas para ventanas",
+  "Click a service marked “View photos” to see examples of our work. The others will take you to our free quote form.":
+    "Haga clic en un servicio marcado con «Ver fotos» para ver ejemplos de nuestro trabajo. Los demás lo llevarán a nuestro formulario de cotización gratis.",
+  "View photos →": "Ver fotos →",
+  "Get a free quote →": "Cotización gratis →",
 
   // Carousels
   "Previous": "Anterior",

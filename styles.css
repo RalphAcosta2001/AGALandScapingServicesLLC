@@ -163,3 +163,27 @@ section {
   background-color: #070d08;
   color: #E2DACF;
 }
+
+/* Service cards: bigger shadow, lift on hover, whole card is clickable */
+.service-tile {
+  background-color: rgba(255, 255, 255, 0.55);
+  box-shadow: 0 0.5rem 1.25rem rgba(7, 13, 8, 0.18);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.service-tile:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0.85rem 1.75rem rgba(7, 13, 8, 0.28);
+}
+
+.service-hint {
+  color: #c95502;
+  font-weight: 600;
+}
+
+/* About Us */
+.about-box {
+  max-width: 800px;
+  background-color: rgba(255, 255, 255, 0.55);
+  box-shadow: 0 0.5rem 1.25rem rgba(7, 13, 8, 0.18);
+}
