@@ -24,7 +24,6 @@ const SPANISH = {
     "Nuestro equipo habla inglés y español, así que podemos atenderle en el idioma en el que se sienta más cómodo.",
 
   // Services
-  "🌿 Our Services": "🌿 Nuestros servicios",
   "Gate Replacement": "Reemplazo de portones",
   "Roof Coating": "Recubrimiento de techos",
   "Retaining Wall": "Muros de contención",
@@ -65,8 +64,8 @@ const SPANISH = {
     "¡Obtenga su cotización gratis y sin complicaciones, rápida y conveniente!",
   "Call us directly at (520) 273-2449 or send an email down below:":
     "Llámenos directamente al (520) 273-2449 o envíenos un correo a continuación:",
-  "(This will be sent directly to us without any third-parties contacting you)":
-    "(Su mensaje nos llegará directamente, sin que ningún tercero se comunique con usted)",
+  "We do not share your information with third parties.":
+    "No compartimos su información con terceros.",
   "Contact Us": "Contáctenos",
   "Name": "Nombre",
   "Email": "Correo electrónico",

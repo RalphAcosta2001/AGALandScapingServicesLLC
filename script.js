@@ -34,4 +34,9 @@ document.addEventListener('DOMContentLoaded', function () {
     el.classList.add('reveal');
     observer.observe(el);
   });
+
+  // Stagger order for the service cards' entrance
+  document.querySelectorAll('.service-tile').forEach((tile, i) => {
+    tile.style.setProperty('--i', i);
+  });
 })();
