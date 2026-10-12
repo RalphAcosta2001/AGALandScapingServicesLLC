@@ -51,33 +51,27 @@ document.addEventListener('DOMContentLoaded', function () {
 })();
 
 
-// Parallax on the home page's mountain photo: the photo moves down at a
-// fraction of the scroll speed, so it appears to drift slower than the page.
+// Parallax on the home page's mountain photo. The photo starts in place, so
+// its top is fully visible at the top of the page. Once the photo reaches
+// the bottom of the fixed navbar, it drifts down at a fraction of the scroll
+// speed, so it appears to move slower than the page. The strip this opens
+// at the photo's top edge always stays hidden behind the navbar.
 (function () {
   const hero = document.querySelector('.hero-section');
   const bg = hero && hero.querySelector('.hero-bg');
-  if (!bg) return;
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    bg.style.top = '0'; // still photo, no extra layer height to crop
-    return;
-  }
+  if (!bg || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
   const SPEED = 0.6; // 0 = scrolls with the page, 1 = stays fixed in place
+  const navbar = document.querySelector('.navbar-custom');
   let ticking = false;
-
-  // The photo shifts down by SPEED x how far the page has scrolled. Extend
-  // the layer above the hero by the most it will ever shift (reached when
-  // the hero scrolls off the top) so no gap opens up.
-  function resize() {
-    const maxShift = SPEED * (hero.offsetTop + hero.offsetHeight);
-    bg.style.top = `${-Math.ceil(maxShift)}px`;
-    update();
-  }
 
   function update() {
     ticking = false;
-    if (hero.getBoundingClientRect().bottom < 0) return; // off screen, nothing to move
-    bg.style.transform = `translate3d(0, ${window.scrollY * SPEED}px, 0)`;
+    const box = hero.getBoundingClientRect();
+    if (box.bottom < 0) return; // off screen, nothing to move
+    const navBottom = navbar ? navbar.getBoundingClientRect().bottom : 0;
+    const scrolledPast = Math.max(0, navBottom - box.top);
+    bg.style.transform = `translate3d(0, ${scrolledPast * SPEED}px, 0)`;
   }
 
   window.addEventListener('scroll', () => {
@@ -86,8 +80,8 @@ document.addEventListener('DOMContentLoaded', function () {
       requestAnimationFrame(update);
     }
   }, { passive: true });
-  window.addEventListener('resize', resize);
-  resize();
+  window.addEventListener('resize', update);
+  update();
 })();
 
 

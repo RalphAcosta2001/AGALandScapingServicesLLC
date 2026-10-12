@@ -25,16 +25,15 @@ body {
   overflow: hidden;
 }
 
-/* Parallax layer: taller than the hero, extending above it, so there is
-   photo to reveal as script.js shifts it down while the page scrolls */
+/* Parallax layer: same size as the hero; script.js shifts it while scrolling */
 .hero-bg {
   position: absolute;
-  top: -70%; /* fallback; script.js sizes this to fit the parallax travel */
+  top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   background-size: cover;
-  background-position: center;
+  background-position: center top; /* always show the top of the photo; any crop comes off the bottom */
   will-change: transform;
 }
 
