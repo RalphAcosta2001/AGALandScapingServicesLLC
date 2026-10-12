@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const bg = hero && hero.querySelector('.hero-bg');
   if (!bg || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-  const SPEED = 0.3; // 0 = scrolls with the page, 1 = stays fixed in place
+  const SPEED = 0.6; // 0 = scrolls with the page, 1 = stays fixed in place
   let ticking = false;
 
   function update() {

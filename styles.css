@@ -29,7 +29,7 @@ body {
    photo to reveal as script.js shifts it down while the page scrolls */
 .hero-bg {
   position: absolute;
-  top: -45%;
+  top: -70%; /* must be more than SPEED (in script.js) x 100% */
   left: 0;
   right: 0;
   bottom: 0;
