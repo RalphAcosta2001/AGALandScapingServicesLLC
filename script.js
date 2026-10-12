@@ -56,16 +56,28 @@ document.addEventListener('DOMContentLoaded', function () {
 (function () {
   const hero = document.querySelector('.hero-section');
   const bg = hero && hero.querySelector('.hero-bg');
-  if (!bg || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!bg) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    bg.style.top = '0'; // still photo, no extra layer height to crop
+    return;
+  }
 
   const SPEED = 0.6; // 0 = scrolls with the page, 1 = stays fixed in place
   let ticking = false;
 
+  // The photo shifts down by SPEED x how far the page has scrolled. Extend
+  // the layer above the hero by the most it will ever shift (reached when
+  // the hero scrolls off the top) so no gap opens up.
+  function resize() {
+    const maxShift = SPEED * (hero.offsetTop + hero.offsetHeight);
+    bg.style.top = `${-Math.ceil(maxShift)}px`;
+    update();
+  }
+
   function update() {
     ticking = false;
-    const box = hero.getBoundingClientRect();
-    if (box.bottom < 0) return; // off screen, nothing to move
-    bg.style.transform = `translate3d(0, ${Math.max(0, -box.top) * SPEED}px, 0)`;
+    if (hero.getBoundingClientRect().bottom < 0) return; // off screen, nothing to move
+    bg.style.transform = `translate3d(0, ${window.scrollY * SPEED}px, 0)`;
   }
 
   window.addEventListener('scroll', () => {
@@ -74,8 +86,8 @@ document.addEventListener('DOMContentLoaded', function () {
       requestAnimationFrame(update);
     }
   }, { passive: true });
-  window.addEventListener('resize', update);
-  update();
+  window.addEventListener('resize', resize);
+  resize();
 })();
 
 

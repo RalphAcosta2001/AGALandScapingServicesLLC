@@ -29,7 +29,7 @@ body {
    photo to reveal as script.js shifts it down while the page scrolls */
 .hero-bg {
   position: absolute;
-  top: -70%; /* must be more than SPEED (in script.js) x 100% */
+  top: -70%; /* fallback; script.js sizes this to fit the parallax travel */
   left: 0;
   right: 0;
   bottom: 0;
@@ -38,8 +38,38 @@ body {
   will-change: transform;
 }
 
-.hero-content {
-  position: relative;
+/* Business name and tagline above the mountain photo */
+.hero-intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 2.5rem;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 1.75rem 16px;
+}
+
+.hero-title {
+  font-size: clamp(2.25rem, 5.5vw, 4.5rem);
+  line-height: 1.05;
+}
+
+.hero-tagline {
+  max-width: 30rem;
+  font-size: clamp(1.05rem, 1.7vw, 1.4rem);
+  text-align: right;
+}
+
+/* Phones: stack the tagline under the name */
+@media (max-width: 767.98px) {
+  .hero-intro {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-tagline {
+    text-align: left;
+  }
 }
 
 header {
