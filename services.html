@@ -13,19 +13,22 @@
  <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
   <div class="container-fluid d-flex align-items-center">
     <!-- Logo and Brand -->
-    <a class="navbar-brand d-flex align-items-center" style="font-size: clamp(1rem, 3vw, 2rem);" href="#">
+    <a class="navbar-brand nav-side d-flex align-items-center" href="#">
       <img src="Pictures/landscaping logo 3.png" alt="AGA Logo" width="50" height="50" class="me-2">
-      AGA Landscaping Services, LLC
+      <span class="brand-name">AGA Landscaping Services, LLC</span>
     </a>
 
-    <!-- Language Toggle (always visible, outside the offcanvas menu) -->
-    <div class="lang-toggle ms-auto" role="group" aria-label="Language">
-      <button type="button" data-lang="en" aria-pressed="true">EN</button>
-      <button type="button" data-lang="es" aria-pressed="false">ES</button>
+    <!-- Language Toggle (centered, always visible) -->
+    <div class="lang-toggle" role="group" aria-label="Language">
+      <button type="button" data-lang="en" aria-pressed="true">English</button>
+      <button type="button" data-lang="es" aria-pressed="false">Spanish</button>
     </div>
 
+    <!-- Right side: nav links (desktop) / menu button (mobile) -->
+    <div class="nav-side nav-side-end">
+
     <!-- Offcanvas Toggle Button -->
-    <button class="navbar-toggler ms-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
       <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -36,7 +39,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
-        <ul class="navbar-nav">
+        <ul class="navbar-nav ms-lg-auto">
           <li class="nav-item">
             <a class="nav-link" href="index.html">Home</a>
           </li>
@@ -57,6 +60,8 @@
           </li> -->
         </ul>
       </div>
+    </div>
+
     </div>
   </div>
 </nav>
