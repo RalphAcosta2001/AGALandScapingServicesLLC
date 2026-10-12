@@ -77,3 +77,14 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('resize', update);
   update();
 })();
+
+
+// Clicking the logo or business name in the navbar scrolls back to the top
+// of the current page (without adding "#" to the address bar).
+document.querySelectorAll('.navbar-brand').forEach(brand => {
+  brand.addEventListener('click', e => {
+    e.preventDefault();
+    const smooth = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({ top: 0, behavior: smooth ? 'smooth' : 'auto' });
+  });
+});
