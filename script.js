@@ -1,13 +1,36 @@
+// In-page links (navbar Services / Contact Us, service cards): scroll to
+// the section on the home page.
 document.addEventListener('DOMContentLoaded', function () {
-    const offcanvasEl = document.getElementById('offcanvasMenu');
-    const offcanvas = new bootstrap.Offcanvas(offcanvasEl);
-    
-    offcanvasEl.querySelectorAll('a.nav-link, a.dropdown-item').forEach(link => {
-      link.addEventListener('click', () => {
+  const offcanvasEl = document.getElementById('offcanvasMenu');
+  const offcanvas = bootstrap.Offcanvas.getOrCreateInstance(offcanvasEl);
+
+  function scrollToSection(target) {
+    // Measure the untransformed layout position: the scroll-reveal animation
+    // shifts sections that are off screen, which would throw off a plain
+    // anchor jump. Leave room for the fixed navbar via scroll-margin-top.
+    const margin = parseFloat(getComputedStyle(target).scrollMarginTop) || 0;
+    let top = 0;
+    for (let el = target; el; el = el.offsetParent) top += el.offsetTop;
+    const smooth = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({ top: top - margin, behavior: smooth ? 'smooth' : 'auto' });
+  }
+
+  document.querySelectorAll('a[href^="#"]:not([href="#"])').forEach(link => {
+    link.addEventListener('click', e => {
+      const target = document.querySelector(link.getAttribute('href'));
+      if (!target) return;
+      e.preventDefault();
+      history.replaceState(null, '', link.getAttribute('href'));
+      // The mobile menu locks page scrolling while open, so close it first
+      if (offcanvasEl.classList.contains('show')) {
+        offcanvasEl.addEventListener('hidden.bs.offcanvas', () => scrollToSection(target), { once: true });
         offcanvas.hide();
-      });
+      } else {
+        scrollToSection(target);
+      }
     });
   });
+});
 
 // Scroll reveal: every section (except the top banner) animates in each
 // time it scrolls into view, whether scrolling down or back up, and resets

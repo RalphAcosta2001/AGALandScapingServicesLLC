@@ -6,9 +6,7 @@ const SPANISH = {
   // Navbar and menu
   "Menu": "Menú",
   "Close": "Cerrar",
-  "Home": "Inicio",
   "Services": "Servicios",
-  "Contact": "Contacto",
   "Language": "Idioma",
   "AGA Logo": "Logotipo de AGA",
 
