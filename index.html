@@ -69,8 +69,10 @@
 
 
   <!-- Hero Section with Background Image (No Button) -->
-<section  class="hero-section text-black d-flex align-items-start pt-3" style="background-image: url('Pictures/a mountain.jpg.webp'); background-size: cover; background-position: center; height: 50vh; padding-top: 20px;">
-  <div class="container text-center">
+<section  class="hero-section text-black d-flex align-items-start pt-3" style="height: 50vh; padding-top: 20px;">
+  <!-- Background photo on its own layer so it can scroll slower than the page (parallax, see script.js) -->
+  <div class="hero-bg" aria-hidden="true" style="background-image: url('Pictures/a mountain.jpg.webp');"></div>
+  <div class="container text-center hero-content">
     <div class="row justify-content-center">
       <div class="col-lg-8">
         <h1 class="display-4 fw-bold">AGA Landscaping Services</h1>

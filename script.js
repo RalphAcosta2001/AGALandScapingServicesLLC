@@ -49,3 +49,31 @@ document.addEventListener('DOMContentLoaded', function () {
     tile.style.setProperty('--i', i);
   });
 })();
+
+
+// Parallax on the home page's mountain photo: the photo moves down at a
+// fraction of the scroll speed, so it appears to drift slower than the page.
+(function () {
+  const hero = document.querySelector('.hero-section');
+  const bg = hero && hero.querySelector('.hero-bg');
+  if (!bg || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  const SPEED = 0.3; // 0 = scrolls with the page, 1 = stays fixed in place
+  let ticking = false;
+
+  function update() {
+    ticking = false;
+    const box = hero.getBoundingClientRect();
+    if (box.bottom < 0) return; // off screen, nothing to move
+    bg.style.transform = `translate3d(0, ${Math.max(0, -box.top) * SPEED}px, 0)`;
+  }
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      ticking = true;
+      requestAnimationFrame(update);
+    }
+  }, { passive: true });
+  window.addEventListener('resize', update);
+  update();
+})();

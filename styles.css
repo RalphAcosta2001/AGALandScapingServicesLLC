@@ -21,6 +21,25 @@ body {
 
 .hero-section {
   padding-top: 70px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Parallax layer: taller than the hero, extending above it, so there is
+   photo to reveal as script.js shifts it down while the page scrolls */
+.hero-bg {
+  position: absolute;
+  top: -45%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  will-change: transform;
+}
+
+.hero-content {
+  position: relative;
 }
 
 header {
