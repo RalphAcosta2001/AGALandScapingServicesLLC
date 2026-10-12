@@ -1,13 +1,13 @@
 # Color Theme
 
-## Current theme: Night Sands
+## Current theme
 
 | Swatch | Hex | CSS variable | Used for |
 |---|---|---|---|
-| ![](https://placehold.co/24x24/FAE8B4/FAE8B4.png) | `#FAE8B4` | `--sand-light` | Page background, text on dark surfaces (buttons, footer, table header), slide-out menu |
-| ![](https://placehold.co/24x24/CBBD93/CBBD93.png) | `#CBBD93` | `--sand` | Navbar, card and table borders, table stripes |
-| ![](https://placehold.co/24x24/80775C/80775C.png) | `#80775C` | `--sand-dark` | Hover color for buttons and service names, form field borders |
-| ![](https://placehold.co/24x24/574A24/574A24.png) | `#574A24` | `--sand-deep` | Body text, buttons, footer, table header, photo frame behind carousel images |
+| ![](https://placehold.co/24x24/D1D0D0/D1D0D0.png) | `#D1D0D0` | `--color-light` | Page background, text on dark surfaces (buttons, footer, table header), slide-out menu |
+| ![](https://placehold.co/24x24/988686/988686.png) | `#988686` | `--color-mid` | Navbar, card and table borders, table stripes |
+| ![](https://placehold.co/24x24/5C4E4E/5C4E4E.png) | `#5C4E4E` | `--color-accent` | Footer, hours-table header, photo frame behind carousel images, button hover, muted text, form field borders |
+| ![](https://placehold.co/24x24/000000/000000.png) | `#000000` | `--color-dark` | Body text, buttons (Contact Us, Send Message), active language button |
 
 The variables are defined once at the top of `styles.css`; change a hex value
 there to recolor the whole site. `thank-you.html` has its own small `<style>`
@@ -15,11 +15,13 @@ block with the same hex values.
 
 ### Contrast notes
 
-- `#574A24` on `#FAE8B4` is 7.2 : 1, so it's safe for any text size.
-- `#574A24` on `#CBBD93` is 4.7 : 1, so it's safe for normal text (used in the navbar).
-- `#80775C` on `#FAE8B4` is only 3.7 : 1, so it's used only for large or bold text and
-  borders, never for small body text.
-- Muted text (`.text-muted`) is `#574A24` at 85% opacity, which comes out to about 5 : 1.
+- `#000000` on `#D1D0D0` is 13.6 : 1, and on `#988686` it's 6.1 : 1, so black is safe for any text size on either.
+- `#5C4E4E` and `#D1D0D0` are 5.1 : 1 against each other, so they work for normal text either way around (used for muted text,
+  the footer and button hovers).
+- `#988686` is too close in lightness to both `#D1D0D0` (2.2 : 1) and
+  `#5C4E4E` (2.3 : 1) for text, so it's only used as a surface (the navbar)
+  and for borders, always with black text on it. This is also why navbar
+  links underline on hover instead of changing color.
 
 ### Intentional exceptions
 
@@ -28,7 +30,16 @@ block with the same hex values.
 - The cards and the About Us box use a translucent white layer over the
   page background to lift them slightly.
 
-## Previous theme (before Night Sands)
+## Previous theme: Night Sands
+
+| Hex | Used for |
+|---|---|
+| `#FAE8B4` | Page background, text on dark surfaces, slide-out menu |
+| `#CBBD93` | Navbar, card and table borders, table stripes |
+| `#80775C` | Hover color for buttons and service names, form field borders |
+| `#574A24` | Body text, buttons, footer, table header, carousel photo frame |
+
+## Original theme (before Night Sands)
 
 | Hex | Used for |
 |---|---|
