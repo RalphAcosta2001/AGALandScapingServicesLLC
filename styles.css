@@ -50,15 +50,25 @@ body {
   will-change: transform;
 }
 
-/* Business name and tagline above the mountain photo */
+/* Hero text above the mountain photo: label, name + tagline, buttons */
+.hero-top {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 2rem 16px 2.25rem;
+}
+
 .hero-intro {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem 2.5rem;
-  max-width: 1320px;
-  margin: 0 auto;
-  padding: 1.75rem 16px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
 }
 
 .hero-title {
@@ -118,7 +128,9 @@ footer {
   padding: 1rem;
 }
 
-section {
+/* Keep in-page link targets clear of the fixed navbar */
+section,
+[id] {
   scroll-margin-top: 80px;
 }
 
@@ -238,17 +250,6 @@ section {
   box-shadow: 0 0.85rem 1.75rem rgba(0, 0, 0, 0.32);
 }
 
-.service-hint {
-  color: var(--color-dark);
-  font-weight: 600;
-}
-
-/* About Us */
-.about-box {
-  max-width: 800px;
-  background-color: rgba(255, 255, 255, 0.55);
-  box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.22);
-}
 
 /* "Full screen" button on each carousel */
 .gallery-frame .carousel-item img {
@@ -408,7 +409,7 @@ section {
   background-color: var(--color-accent);
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .navbar-custom .navbar-nav {
     align-items: center;
   }
@@ -419,7 +420,7 @@ section {
 }
 
 /* In the mobile slide-out menu, give the button room above it */
-@media (max-width: 991.98px) {
+@media (max-width: 1199.98px) {
   .navbar-custom .nav-link.nav-cta {
     margin-top: 0.75rem;
   }
@@ -478,4 +479,275 @@ footer a {
 
 footer a:hover {
   text-decoration: none !important;
+}
+
+/* ---------- Home page layout (modeled on a service-area landing page) ---------- */
+
+/* Small uppercase label above headings */
+.eyebrow {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 0.75rem;
+}
+
+.section-title {
+  font-size: clamp(1.75rem, 3.5vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+/* Outline button next to the main call-to-action */
+.btn-ghost {
+  display: inline-block;
+  padding: 0.6rem 1.4rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-dark);
+  border: 2px solid var(--color-dark);
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.btn-ghost:hover,
+.btn-ghost:focus-visible {
+  color: var(--color-light);
+  background-color: var(--color-dark);
+}
+
+.btn-cta {
+  text-decoration: none;
+}
+
+.btn-cta-sm {
+  padding: 0.4rem 1.1rem;
+  font-size: 1rem;
+}
+
+/* At a glance */
+.stat-tile {
+  height: 100%;
+  padding: 1.25rem;
+  background-color: rgba(255, 255, 255, 0.55);
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.12);
+}
+
+.stat-tile strong {
+  display: block;
+  font-size: clamp(1.25rem, 2.4vw, 1.75rem);
+  line-height: 1.2;
+}
+
+.stat-tile span {
+  color: var(--color-accent);
+}
+
+.featured-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.featured-list a {
+  color: var(--color-dark);
+  font-weight: 600;
+}
+
+.featured-list a::before {
+  content: "→ ";
+}
+
+/* About: stacked text blocks */
+.text-blocks {
+  max-width: 760px;
+}
+
+.text-block + .text-block {
+  margin-top: 2.25rem;
+}
+
+.text-block h2 {
+  font-size: clamp(1.4rem, 2.6vw, 1.9rem);
+  font-weight: 700;
+}
+
+.text-block p {
+  font-size: 1.1rem;
+  margin-bottom: 0;
+}
+
+/* Numbered service cards */
+.service-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.service-num {
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--color-accent);
+}
+
+.service-card p {
+  flex-grow: 1;
+}
+
+.service-link {
+  font-weight: 700;
+}
+
+/* Our Work: carousels side by side on wide screens */
+.work-item .gallery-frame {
+  width: 100%;
+}
+
+/* Service areas */
+.area-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.area-list li {
+  padding: 0.45rem 1rem;
+  font-weight: 600;
+  background-color: rgba(255, 255, 255, 0.55);
+  border: 1px solid var(--color-mid);
+  border-radius: 999px;
+}
+
+/* FAQ accordion with +/- toggles */
+.faq-list {
+  max-width: 860px;
+  --bs-accordion-bg: rgba(255, 255, 255, 0.55);
+  --bs-accordion-color: var(--color-dark);
+  --bs-accordion-border-color: var(--color-mid);
+  --bs-accordion-btn-color: var(--color-dark);
+  --bs-accordion-active-color: var(--color-dark);
+  --bs-accordion-active-bg: rgba(255, 255, 255, 0.75);
+  --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(92, 78, 78, 0.35);
+}
+
+.faq-list .accordion-button {
+  font-family: inherit;
+  font-size: 1.15rem;
+  font-weight: 700;
+  border-radius: 0;
+}
+
+/* The site-wide button:hover color would otherwise paint these gray */
+.faq-list .accordion-button:hover {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.faq-list .accordion-button::after {
+  content: "+";
+  background-image: none;
+  width: auto;
+  height: auto;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1;
+  transform: none;
+}
+
+.faq-list .accordion-button:not(.collapsed)::after {
+  content: "\2212"; /* minus sign */
+  background-image: none;
+  transform: none;
+}
+
+/* Contact: full-width call band */
+.call-band {
+  padding: 3rem 0;
+  text-align: center;
+  color: var(--color-light);
+  background-color: var(--color-dark);
+}
+
+.call-band h2 {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 700;
+}
+
+.call-button {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 2.5rem;
+  color: var(--color-dark);
+  background-color: var(--color-light);
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background-color 0.15s ease;
+}
+
+.call-button:hover,
+.call-button:focus-visible {
+  color: var(--color-dark);
+  background-color: #fff;
+}
+
+.call-number {
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.call-sub {
+  font-size: 0.95rem;
+  color: var(--color-accent);
+}
+
+/* Footer: brand + link columns, bottom bar */
+footer.site-footer {
+  padding: 3rem 0 0;
+  text-align: left;
+}
+
+.footer-brand {
+  color: var(--color-dark);
+  font-size: 1.2rem;
+  font-weight: 700;
+  white-space: normal;
+}
+
+.footer-heading {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.footer-links {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.footer-links li + li {
+  margin-top: 0.35rem;
+}
+
+.footer-phone {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.footer-bottom {
+  margin-top: 2.5rem;
+  padding: 1rem 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
 }

@@ -10,7 +10,7 @@
 </head>
 <body>
 
- <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+ <nav class="navbar navbar-expand-xl navbar-custom fixed-top">
   <div class="container-fluid d-flex align-items-center">
     <!-- Logo and Brand -->
     <a class="navbar-brand nav-side d-flex align-items-center" href="#">
@@ -39,24 +39,19 @@
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
-        <ul class="navbar-nav ms-lg-auto">
+        <ul class="navbar-nav ms-xl-auto">
           <li class="nav-item">
             <a class="nav-link" href="#services">Services</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="#areas">Service Areas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#work">Our Work</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link nav-cta" href="#contact">Contact Us</a>
           </li>
-          <!-- Optional Dropdown
-          <li class="nav-item dropdown mt-3">
-            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-              More
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li> -->
         </ul>
       </div>
     </div>
@@ -65,14 +60,17 @@
   </div>
 </nav>
 
-
-
-
-  <!-- Hero Section with Background Image (No Button) -->
-<!-- Intro: business name (left) and tagline (right), above the mountain photo -->
-<div class="hero-intro">
-  <h1 class="hero-title fw-bold mb-0">AGA Landscaping Services</h1>
-  <p class="hero-tagline mb-0">Proudly serving Tucson with beautiful landscaping at affordable prices.</p>
+<!-- Hero: label, business name (left) + tagline (right), buttons -->
+<div class="hero-top">
+  <p class="eyebrow">Serving Tucson, Arizona</p>
+  <div class="hero-intro">
+    <h1 class="hero-title fw-bold mb-0">AGA Landscaping Services</h1>
+    <p class="hero-tagline mb-0">Proudly serving Tucson with beautiful landscaping at affordable prices.</p>
+  </div>
+  <div class="hero-actions">
+    <a href="#contact" class="btn-cta">Get a free estimate</a>
+    <a href="#services" class="btn-ghost">Explore every service ↘</a>
+  </div>
 </div>
 
 <!-- Mountain photo on its own layer so it can scroll slower than the page (parallax, see script.js) -->
@@ -80,253 +78,354 @@
   <div class="hero-bg" aria-hidden="true" style="background-image: url('Pictures/a mountain.jpg.webp');"></div>
 </section>
 
-  <!-- About Us -->
-  <section id="about" class="container my-5">
-    <div class="about-box mx-auto p-4 p-md-5 rounded text-center">
-      <h2 class="mb-3">About Us</h2>
-      <p class="fs-5">AGA Landscaping Services has been doing landscaping projects for 13 years. From gates and retaining walls to turf, pavers, and yard maintenance, we bring that experience to every job, big or small.</p>
-      <p class="fs-5">We work in Tucson, Marana, Sabino Canyon, Vail, Oro Valley, and Mount Lemmon.</p>
-      <p class="fs-5 mb-0">Our team speaks both English and Spanish, so we can help you in whichever language you're most comfortable with.</p>
-    </div>
-  </section>
-
-    <!-- Service Listing Section -->
-  <section id="services" class="container my-5">
-    <h2 class="mb-2 text-center">Services</h2>
-    <p class="text-center text-muted mb-4">Click a service marked “View photos” to see examples of our work. The others will take you to our free quote form.</p>
-    <div class="row g-4 text-center">
-  
-      <div class="col-md-4">
-        <div class="service-tile p-4 border rounded h-100 d-flex flex-column align-items-center justify-content-center position-relative">
-          <a href="#gateReplacement" class="text-decoration-none stretched-link">
-            <h5 class="mb-0">Gate Replacement</h5>
-          </a>
-          <small class="service-hint mt-2">View photos →</small>
-        </div>
-      </div>
-  
-      <div class="col-md-4">
-        <div class="service-tile p-4 border rounded h-100 d-flex flex-column align-items-center justify-content-center position-relative">
-          <a href="#roofCoating" class="text-decoration-none stretched-link">
-            <h5 class="mb-0">Roof Coating</h5>
-          </a>
-          <small class="service-hint mt-2">View photos →</small>
-        </div>
-      </div>
-  
-      <div class="col-md-4">
-        <div class="service-tile p-4 border rounded h-100 d-flex flex-column align-items-center justify-content-center position-relative">
-          <a href="#retainingWall" class="text-decoration-none stretched-link">
-            <h5 class="mb-0">Retaining Wall</h5>
-          </a>
-          <small class="service-hint mt-2">View photos →</small>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="service-tile p-4 border rounded h-100 d-flex flex-column align-items-center justify-content-center position-relative">
-          <a href="#paver" class="text-decoration-none stretched-link">
-            <h5 class="mb-0">Pavers</h5>
-          </a>
-          <small class="service-hint mt-2">View photos →</small>
-        </div>
-      </div>
-  
-      <div class="col-md-4">
-        <div class="service-tile p-4 border rounded h-100 d-flex flex-column align-items-center justify-content-center position-relative">
-          <a href="#turfSyntheticGrass" class="text-decoration-none stretched-link">
-            <h5 class="mb-0">Turf and Synthetic Grass</h5>
-          </a>
-          <small class="service-hint mt-2">View photos →</small>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="service-tile p-4 border rounded h-100 d-flex flex-column align-items-center justify-content-center position-relative">
-          <a href="#contact" class="text-decoration-none stretched-link">
-            <h5 class="mb-0">Planting</h5>
-          </a>
-          <small class="service-hint mt-2">Get a free quote →</small>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="service-tile p-4 border rounded h-100 d-flex flex-column align-items-center justify-content-center position-relative">
-          <a href="#contact" class="text-decoration-none stretched-link">
-            <h5 class="mb-0">Yard Maintenance</h5>
-          </a>
-          <small class="service-hint mt-2">Get a free quote →</small>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="service-tile p-4 border rounded h-100 d-flex flex-column align-items-center justify-content-center position-relative">
-          <a href="#contact" class="text-decoration-none stretched-link">
-            <h5 class="mb-0">Tree Removal and Trimming</h5>
-          </a>
-          <small class="service-hint mt-2">Get a free quote →</small>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="service-tile p-4 border rounded h-100 d-flex flex-column align-items-center justify-content-center position-relative">
-          <a href="#contact" class="text-decoration-none stretched-link">
-            <h5 class="mb-0">Painting</h5>
-          </a>
-          <small class="service-hint mt-2">Get a free quote →</small>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="service-tile p-4 border rounded h-100 d-flex flex-column align-items-center justify-content-center position-relative">
-          <a href="#contact" class="text-decoration-none stretched-link">
-            <h5 class="mb-0">Carpentry</h5>
-          </a>
-          <small class="service-hint mt-2">Get a free quote →</small>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="service-tile p-4 border rounded h-100 d-flex flex-column align-items-center justify-content-center position-relative">
-          <a href="#contact" class="text-decoration-none stretched-link">
-            <h5 class="mb-0">Window Shutters</h5>
-          </a>
-          <small class="service-hint mt-2">Get a free quote →</small>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-<!-- Section: Gate Replacement Carousel -->
-<section id="gateReplacement" class="container my-5">
-  <h2 class="mb-4 text-center">Gate Replacement</h2>
-  <div id="gateCarousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner gallery-frame">
-      <div class="carousel-item active">
-        <img src="Pictures/Gate 2.JPG" loading="lazy" class="d-block w-100 img-fluid rounded" alt="Gate 1">
-      </div>
-      <div class="carousel-item">
-        <img src="Pictures/Gate 1.JPG" loading="lazy" class="d-block w-100 img-fluid rounded" alt="Gate 2">
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#gateCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#gateCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
+<!-- At a glance: stat tiles + featured services -->
+<section class="container my-5" aria-label="At a glance">
+  <div class="row g-3">
+    <div class="col-6 col-lg-3"><div class="stat-tile"><strong>Tucson</strong><span>and 5 nearby areas</span></div></div>
+    <div class="col-6 col-lg-3"><div class="stat-tile"><strong>13 years</strong><span>of landscaping projects</span></div></div>
+    <div class="col-6 col-lg-3"><div class="stat-tile"><strong>11 services</strong><span>from planting to roof coating</span></div></div>
+    <div class="col-6 col-lg-3"><div class="stat-tile"><strong>English &amp; Spanish</strong><span>spoken by our team</span></div></div>
+  </div>
+  <div class="featured mt-4">
+    <h2 class="eyebrow mb-2">Featured services</h2>
+    <ul class="featured-list">
+        <li><a href="#svc-turf">Turf and Synthetic Grass</a></li>
+        <li><a href="#svc-pavers">Pavers</a></li>
+        <li><a href="#svc-walls">Retaining Walls</a></li>
+        <li><a href="#svc-maintenance">Yard Maintenance</a></li>
+        <li><a href="#svc-trees">Tree Removal and Trimming</a></li>
+        <li><a href="#svc-gates">Gate Replacement</a></li>
+    </ul>
   </div>
 </section>
 
-<!-- Section: Roof Coating Carousel -->
-<section id="roofCoating" class="container my-5">
-  <h2 class="mb-4 text-center">Roof Coating</h2>
-  <div id="roofCarousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner gallery-frame">
-      <div class="carousel-item active">
-        <img src="Pictures/Roof Coating 1.JPG" loading="lazy" class="d-block w-100 img-fluid rounded" alt="Roof Coating 1">
-      </div>
-      <div class="carousel-item">
-        <img src="Pictures/Roof Coating 2.JPG" loading="lazy" class="d-block w-100 img-fluid rounded" alt="Roof Coating 2">
-      </div>
+<!-- About Us: short stacked text blocks -->
+<section id="about" class="container my-5">
+  <div class="text-blocks">
+    <div class="text-block">
+      <h2>13 years of landscaping projects</h2>
+      <p>AGA Landscaping Services has been doing landscaping projects for 13 years. From gates and retaining walls to turf, pavers, and yard maintenance, we bring that experience to every job, big or small.</p>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#roofCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#roofCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
+    <div class="text-block">
+      <h2>One call for many projects</h2>
+      <p>We do more than yard work. Gates, roof coating, painting, carpentry, and window shutters mean one call can cover several projects around your home.</p>
+    </div>
+    <div class="text-block">
+      <h2>Help in English or Spanish</h2>
+      <p>Our team speaks both English and Spanish, so we can help you in whichever language you're most comfortable with.</p>
+    </div>
   </div>
 </section>
 
+<!-- Services: numbered cards -->
+<section id="services" class="container my-5">
+  <p class="eyebrow mb-1">Services in Tucson</p>
+  <h2 class="section-title mb-2">Start with the project in front of you.</h2>
+  <p class="text-muted mb-4">Click a service marked “View photos” to see examples of our work. The others will take you to our free quote form.</p>
+  <div class="row g-4">
 
- <!-- Section: Retaining Wall Carousel -->
-<section id="retainingWall" class="container my-5">
-  <h2 class="mb-4 text-center">Retaining Wall</h2>
-  <div id="retainingWallCarousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner gallery-frame">
-      <div class="carousel-item active">
-        <img src="Pictures/Retaining wall 1.JPG" loading="lazy" class="d-block w-100 img-fluid rounded" alt="Retaining Wall 1">
+      <div class="col-md-6 col-lg-4">
+        <article id="svc-gates" class="service-tile service-card h-100 p-4 border rounded position-relative">
+          <span class="service-num">01</span>
+          <h3 class="h5 mt-2 mb-2">Gate Replacement</h3>
+          <p class="mb-3">Remove worn or damaged gates and install new ones that open, close, and latch the way they should.</p>
+          <a href="#gateReplacement" class="service-link stretched-link">View photos ↗</a>
+        </article>
       </div>
-      <div class="carousel-item">
-        <img src="Pictures/Retaining wall 2.JPG" loading="lazy" class="d-block w-100 img-fluid rounded" alt="Retaining Wall 2">
+
+      <div class="col-md-6 col-lg-4">
+        <article id="svc-roof" class="service-tile service-card h-100 p-4 border rounded position-relative">
+          <span class="service-num">02</span>
+          <h3 class="h5 mt-2 mb-2">Roof Coating</h3>
+          <p class="mb-3">Apply a protective coating to help seal your roof against the Arizona sun and monsoon rain.</p>
+          <a href="#roofCoating" class="service-link stretched-link">View photos ↗</a>
+        </article>
       </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#retainingWallCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#retainingWallCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
+
+      <div class="col-md-6 col-lg-4">
+        <article id="svc-walls" class="service-tile service-card h-100 p-4 border rounded position-relative">
+          <span class="service-num">03</span>
+          <h3 class="h5 mt-2 mb-2">Retaining Wall</h3>
+          <p class="mb-3">Build walls that hold back soil on slopes and create level, usable space in your yard.</p>
+          <a href="#retainingWall" class="service-link stretched-link">View photos ↗</a>
+        </article>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <article id="svc-pavers" class="service-tile service-card h-100 p-4 border rounded position-relative">
+          <span class="service-num">04</span>
+          <h3 class="h5 mt-2 mb-2">Pavers</h3>
+          <p class="mb-3">Lay paver patios, walkways, and driveways on a properly prepared base.</p>
+          <a href="#paver" class="service-link stretched-link">View photos ↗</a>
+        </article>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <article id="svc-turf" class="service-tile service-card h-100 p-4 border rounded position-relative">
+          <span class="service-num">05</span>
+          <h3 class="h5 mt-2 mb-2">Turf and Synthetic Grass</h3>
+          <p class="mb-3">Install natural or synthetic grass for a green yard, with low-upkeep options.</p>
+          <a href="#turfSyntheticGrass" class="service-link stretched-link">View photos ↗</a>
+        </article>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <article id="svc-planting" class="service-tile service-card h-100 p-4 border rounded position-relative">
+          <span class="service-num">06</span>
+          <h3 class="h5 mt-2 mb-2">Planting</h3>
+          <p class="mb-3">Plant trees, shrubs, and flowers that suit your yard and the desert climate.</p>
+          <a href="#contact" class="service-link stretched-link">Get a free quote ↗</a>
+        </article>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <article id="svc-maintenance" class="service-tile service-card h-100 p-4 border rounded position-relative">
+          <span class="service-num">07</span>
+          <h3 class="h5 mt-2 mb-2">Yard Maintenance</h3>
+          <p class="mb-3">Keep your yard clean and tidy with weeding, trimming, and general cleanup.</p>
+          <a href="#contact" class="service-link stretched-link">Get a free quote ↗</a>
+        </article>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <article id="svc-trees" class="service-tile service-card h-100 p-4 border rounded position-relative">
+          <span class="service-num">08</span>
+          <h3 class="h5 mt-2 mb-2">Tree Removal and Trimming</h3>
+          <p class="mb-3">Trim overgrown trees, or remove ones that are dead, damaged, or in the way.</p>
+          <a href="#contact" class="service-link stretched-link">Get a free quote ↗</a>
+        </article>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <article id="svc-painting" class="service-tile service-card h-100 p-4 border rounded position-relative">
+          <span class="service-num">09</span>
+          <h3 class="h5 mt-2 mb-2">Painting</h3>
+          <p class="mb-3">Repaint walls, fences, gates, and trim to refresh the look of your property.</p>
+          <a href="#contact" class="service-link stretched-link">Get a free quote ↗</a>
+        </article>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <article id="svc-carpentry" class="service-tile service-card h-100 p-4 border rounded position-relative">
+          <span class="service-num">10</span>
+          <h3 class="h5 mt-2 mb-2">Carpentry</h3>
+          <p class="mb-3">Build and repair wood structures around your home and yard.</p>
+          <a href="#contact" class="service-link stretched-link">Get a free quote ↗</a>
+        </article>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <article id="svc-shutters" class="service-tile service-card h-100 p-4 border rounded position-relative">
+          <span class="service-num">11</span>
+          <h3 class="h5 mt-2 mb-2">Window Shutters</h3>
+          <p class="mb-3">Install and replace window shutters to finish the look of your home.</p>
+          <a href="#contact" class="service-link stretched-link">Get a free quote ↗</a>
+        </article>
+      </div>
+
   </div>
 </section>
 
- <!-- Section: Paver Photos Carousel -->
-<section id="paver" class="container my-5">
-  <h2 class="mb-4 text-center">Paver</h2>
-  <div id="paverCarousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner gallery-frame">
-      <div class="carousel-item active">
-        <img src="Pictures/Paver 3.jpg" loading="lazy" class="d-block w-100 img-fluid rounded" alt="Paver 1">
+<!-- Our Work: project photo carousels -->
+<section id="work" class="container my-5">
+  <p class="eyebrow mb-1">Our Work</p>
+  <h2 class="section-title mb-4">Photos from our projects.</h2>
+  <div class="row g-5 justify-content-center">
+      <div class="col-lg-6">
+        <article id="gateReplacement" class="work-item">
+          <h3 class="h4 mb-3">Gate Replacement</h3>
+          <div id="gateCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner gallery-frame">
+              <div class="carousel-item active">
+                <img src="Pictures/Gate 2.JPG" loading="lazy" class="d-block w-100 img-fluid rounded" alt="Gate 1">
+              </div>
+              <div class="carousel-item">
+                <img src="Pictures/Gate 1.JPG" loading="lazy" class="d-block w-100 img-fluid rounded" alt="Gate 2">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#gateCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#gateCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </article>
       </div>
-      <div class="carousel-item">
-        <img src="Pictures/Paver 2.jpg" loading="lazy" class="d-block w-100 img-fluid rounded" alt="Paver 2">
+      <div class="col-lg-6">
+        <article id="roofCoating" class="work-item">
+          <h3 class="h4 mb-3">Roof Coating</h3>
+          <div id="roofCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner gallery-frame">
+              <div class="carousel-item active">
+                <img src="Pictures/Roof Coating 1.JPG" loading="lazy" class="d-block w-100 img-fluid rounded" alt="Roof Coating 1">
+              </div>
+              <div class="carousel-item">
+                <img src="Pictures/Roof Coating 2.JPG" loading="lazy" class="d-block w-100 img-fluid rounded" alt="Roof Coating 2">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#roofCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#roofCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </article>
       </div>
-      <div class="carousel-item">
-        <img src="Pictures/Paver 1.jpg" loading="lazy" class="d-block w-100 img-fluid rounded" alt="Paver 3">
+      <div class="col-lg-6">
+        <article id="retainingWall" class="work-item">
+          <h3 class="h4 mb-3">Retaining Wall</h3>
+          <div id="retainingWallCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner gallery-frame">
+              <div class="carousel-item active">
+                <img src="Pictures/Retaining wall 1.JPG" loading="lazy" class="d-block w-100 img-fluid rounded" alt="Retaining Wall 1">
+              </div>
+              <div class="carousel-item">
+                <img src="Pictures/Retaining wall 2.JPG" loading="lazy" class="d-block w-100 img-fluid rounded" alt="Retaining Wall 2">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#retainingWallCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#retainingWallCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </article>
       </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#paverCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#paverCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
+      <div class="col-lg-6">
+        <article id="paver" class="work-item">
+          <h3 class="h4 mb-3">Pavers</h3>
+          <div id="paverCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner gallery-frame">
+              <div class="carousel-item active">
+                <img src="Pictures/Paver 3.jpg" loading="lazy" class="d-block w-100 img-fluid rounded" alt="Paver 1">
+              </div>
+              <div class="carousel-item">
+                <img src="Pictures/Paver 2.jpg" loading="lazy" class="d-block w-100 img-fluid rounded" alt="Paver 2">
+              </div>
+              <div class="carousel-item">
+                <img src="Pictures/Paver 1.jpg" loading="lazy" class="d-block w-100 img-fluid rounded" alt="Paver 3">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#paverCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#paverCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </article>
+      </div>
+      <div class="col-lg-6">
+        <article id="turfSyntheticGrass" class="work-item">
+          <h3 class="h4 mb-3">Turf and Synthetic Grass</h3>
+          <div id="turfCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner gallery-frame">
+              <div class="carousel-item active">
+                <img src="Pictures/Grass 1.JPG" loading="lazy" class="d-block w-100 img-fluid rounded" alt="Grass 1">
+              </div>
+              <div class="carousel-item">
+                <img src="Pictures/Grass 2.jpg" loading="lazy" class="d-block w-100 img-fluid rounded" alt="Grass 2">
+              </div>
+              <div class="carousel-item">
+                <img src="Pictures/Grass 3.jpg" loading="lazy" class="d-block w-100 img-fluid rounded" alt="Grass 3">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#turfCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#turfCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </article>
+      </div>
   </div>
 </section>
 
- <!-- Section: Turf and Synthetic Grass Carousel -->
-<section id="turfSyntheticGrass" class="container my-5">
-  <h2 class="mb-4 text-center">Turf and Synthetic Grass</h2>
-  <div id="turfCarousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner gallery-frame">
-      <div class="carousel-item active">
-        <img src="Pictures/Grass 1.JPG" loading="lazy" class="d-block w-100 img-fluid rounded" alt="Grass 1">
+<!-- Service areas -->
+<section id="areas" class="container my-5">
+  <p class="eyebrow mb-1">Service Areas</p>
+  <h2 class="section-title mb-2">Where we work.</h2>
+  <p class="mb-3">We work in Tucson, Marana, Sabino Canyon, Vail, Oro Valley, and Mount Lemmon.</p>
+  <ul class="area-list">
+      <li>Tucson</li>
+      <li>Marana</li>
+      <li>Sabino Canyon</li>
+      <li>Vail</li>
+      <li>Oro Valley</li>
+      <li>Mount Lemmon</li>
+  </ul>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="container my-5">
+  <p class="eyebrow mb-1">FAQ</p>
+  <h2 class="section-title mb-4">Common questions.</h2>
+  <div class="accordion faq-list" id="faqList">
+      <div class="accordion-item">
+        <h3 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="false" aria-controls="faq1">Are estimates free?</button>
+        </h3>
+        <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqList">
+          <div class="accordion-body">Yes. Call us at (520) 273-2449 or send a message through the form below, tell us about your project, and we'll get back to you with a free estimate.</div>
+        </div>
       </div>
-      <div class="carousel-item">
-        <img src="Pictures/Grass 2.jpg" loading="lazy" class="d-block w-100 img-fluid rounded" alt="Grass 2">
+      <div class="accordion-item">
+        <h3 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">Which areas do you serve?</button>
+        </h3>
+        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqList">
+          <div class="accordion-body">We work in Tucson, Marana, Sabino Canyon, Vail, Oro Valley, and Mount Lemmon. If you're nearby and not sure, give us a call.</div>
+        </div>
       </div>
-      <div class="carousel-item">
-        <img src="Pictures/Grass 3.jpg" loading="lazy" class="d-block w-100 img-fluid rounded" alt="Grass 3">
+      <div class="accordion-item">
+        <h3 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">Can I talk with you in Spanish?</button>
+        </h3>
+        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqList">
+          <div class="accordion-body">Yes. Our team speaks both English and Spanish, so you can talk with us in whichever language you prefer.</div>
+        </div>
       </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#turfCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#turfCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
+      <div class="accordion-item">
+        <h3 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">What are your hours?</button>
+        </h3>
+        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqList">
+          <div class="accordion-body">Monday through Saturday, 5:00 AM to 2:00 PM. We're closed on Sundays.</div>
+        </div>
+      </div>
   </div>
 </section>
 
-  <!-- Availability Schedule -->
-<section id="contact" class="row justify-content-center text-center">  
-    <h2 class="mb-4 text-center">Get Your Free, No-Hassle Quote - Fast and Convenient!</h2>  
-    <p class="text-muted fs-5 mb-4">Call us directly at (520) 273-2449 or send an email down below:</p>
-    <p class="text-muted mb-4">We do not share your information with third parties.</p>
-    <form action="https://formsubmit.co/gastonmoralesz49@gmail.com" method="POST" class="contact-form my-5">
-      <h2 class="mb-4">Contact Us</h2>
+<!-- Contact: call band, then email form and hours -->
+<section id="contact" class="my-5">
+  <div class="call-band">
+    <div class="container">
+      <h2 class="mb-3">Get Your Free, No-Hassle Quote - Fast and Convenient!</h2>
+      <a href="tel:+15202732449" class="call-button">
+        <span class="call-number">(520) 273-2449</span>
+        <span class="call-sub">Tap to call now ↗</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="container text-center">
+    <form action="https://formsubmit.co/gastonmoralesz49@gmail.com" method="POST" class="contact-form my-4">
+      <h2 class="mb-2">Contact Us</h2>
+      <p class="text-muted mb-4">We do not share your information with third parties.</p>
     
       <div class="mb-3">
         <label for="name" class="form-label">Name</label>
@@ -354,9 +453,9 @@
     
       <button type="submit" class="btn-cta">Send Message</button>
     </form>
-    
 
-    <div class="col-md-8 col-lg-6">
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-6">
         <table class="table table-theme table-bordered table-striped text-center">
           <thead>
             <tr>
@@ -376,18 +475,66 @@
         </table>
       </div>
     </div>
-  </section>
-  
+  </div>
+</section>
 
-  <!-- Footer -->
-  <footer class="py-4 mt-5">
-    <div class="container text-center">
-      <p class="mb-1">📧 Email: <a href="mailto:gastonmoralesz49@gmail.com" class="text-decoration-underline">gastonmoralesz49@gmail.com</a></p>
-      <p class="mb-3">📞 Phone: <a href="tel:+15202732449" class="text-decoration-underline">(520) 273-2449</a></p>
-      <p class="mb-0">© 2025 AGA Landscaping Services, LLC. All rights reserved.</p>
+<!-- Footer: brand + link columns, bottom bar -->
+<footer class="site-footer mt-5">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <a href="#" class="footer-brand navbar-brand d-flex align-items-center">
+          <img src="Pictures/landscaping logo 3.png" alt="AGA Logo" width="44" height="44" class="me-2" loading="lazy">
+          <span>AGA Landscaping Services, LLC</span>
+        </a>
+        <p class="mt-2 mb-2">Proudly serving Tucson with beautiful landscaping at affordable prices.</p>
+        <a href="tel:+15202732449" class="footer-phone">(520) 273-2449</a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <h2 class="footer-heading">Services</h2>
+        <ul class="footer-links">
+            <li><a href="#svc-gates">Gate Replacement</a></li>
+            <li><a href="#svc-roof">Roof Coating</a></li>
+            <li><a href="#svc-walls">Retaining Wall</a></li>
+            <li><a href="#svc-pavers">Pavers</a></li>
+            <li><a href="#svc-turf">Turf and Synthetic Grass</a></li>
+            <li><a href="#svc-planting">Planting</a></li>
+            <li><a href="#svc-maintenance">Yard Maintenance</a></li>
+            <li><a href="#svc-trees">Tree Removal and Trimming</a></li>
+            <li><a href="#svc-painting">Painting</a></li>
+            <li><a href="#svc-carpentry">Carpentry</a></li>
+            <li><a href="#svc-shutters">Window Shutters</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <h2 class="footer-heading">Service Areas</h2>
+        <ul class="footer-links">
+            <li>Tucson</li>
+            <li>Marana</li>
+            <li>Sabino Canyon</li>
+            <li>Vail</li>
+            <li>Oro Valley</li>
+            <li>Mount Lemmon</li>
+        </ul>
+      </div>
+      <div class="col-md-4 col-lg-3">
+        <h2 class="footer-heading">Contact</h2>
+        <ul class="footer-links">
+          <li>📞 <a href="tel:+15202732449">(520) 273-2449</a></li>
+          <li>📧 <a href="mailto:gastonmoralesz49@gmail.com">gastonmoralesz49@gmail.com</a></li>
+          <li>Monday – Saturday: 5:00 AM – 2:00 PM</li>
+          <li>Sunday: Closed</li>
+        </ul>
+      </div>
     </div>
-  </footer>
-  
+  </div>
+  <div class="footer-bottom">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2">
+      <p class="mb-0">© 2025 AGA Landscaping Services, LLC. All rights reserved.</p>
+      <a href="#contact" class="btn-cta btn-cta-sm">Contact Us</a>
+    </div>
+  </div>
+</footer>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
