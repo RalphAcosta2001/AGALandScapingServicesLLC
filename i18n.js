@@ -16,8 +16,10 @@ const SPANISH = {
 
   // About Us
   "About Us": "Sobre nosotros",
-  "AGA Landscaping Services has been doing landscaping projects for over 20 years. From gates and retaining walls to turf, pavers, and yard maintenance, we bring that experience to every job, big or small.":
-    "AGA Landscaping Services lleva más de 20 años realizando proyectos de jardinería. Desde portones y muros de contención hasta césped, adoquines y mantenimiento de jardines, aplicamos esa experiencia en cada trabajo, sea grande o pequeño.",
+  "AGA Landscaping Services has been doing landscaping projects for 13 years. From gates and retaining walls to turf, pavers, and yard maintenance, we bring that experience to every job, big or small.":
+    "AGA Landscaping Services lleva 13 años realizando proyectos de jardinería. Desde portones y muros de contención hasta césped, adoquines y mantenimiento de jardines, aplicamos esa experiencia en cada trabajo, sea grande o pequeño.",
+  "We work in Tucson, Marana, Sabino Canyon, Vail, Oro Valley, and Mount Lemmon.":
+    "Trabajamos en Tucson, Marana, Sabino Canyon, Vail, Oro Valley y Mount Lemmon.",
   "Our team speaks both English and Spanish, so we can help you in whichever language you're most comfortable with.":
     "Nuestro equipo habla inglés y español, así que podemos atenderle en el idioma en el que se sienta más cómodo.",
 

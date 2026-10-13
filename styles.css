@@ -30,8 +30,10 @@ body {
   height: 70px;
 }
 
+/* Same shape as the mountain photo (1600 x 1067), so the whole photo
+   fits with nothing cropped */
 .hero-section {
-  padding-top: 70px;
+  aspect-ratio: 1600 / 1067;
   position: relative;
   overflow: hidden;
 }
